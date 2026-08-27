@@ -25,12 +25,16 @@ export async function GET() {
   const isJWT = token.trim().startsWith("eyJ");
   console.log(`📡 认证方式: ${isJWT ? "JWT (Bearer 头)" : "API Key (查询参数)"}`);
 
-  // 🌟 核心：按照你提供的文档，尝试两个可能的 Host
-  // 如果你有特定的 API Host（例如 xxx.qweather.com），请把第一个换成它
-  const apiHosts = [
-    'https://api.qweather.com/v7/weather/now',
-    'https://devapi.qweather.com/v7/weather/now'
-  ];
+  // 🌟 核心：优先使用你的专属 API Host（2026 年起和风天气强制要求）
+  // 在 Vercel 环境变量中设置 QWEATHER_API_HOST，例如 h2a9cf3mhs.xy.qweatherapi.com
+  // 未设置时回退到旧公共域名（可能返回 Invalid Host）
+  const customHost = (process.env.QWEATHER_API_HOST || '').trim();
+  const apiHosts = customHost
+    ? [`https://${customHost}/v7/weather/now`]
+    : [
+        'https://api.qweather.com/v7/weather/now',
+        'https://devapi.qweather.com/v7/weather/now'
+      ];
 
   for (const host of apiHosts) {
     try {
