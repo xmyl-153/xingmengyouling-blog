@@ -9,4 +9,4 @@
 :HL["/xingmengyouling-blog/_next/static/chunks/0-y7.kz1~5qzw.css","style"]
 :HL["/xingmengyouling-blog/玛丽婚纱.jpg","image"]
 :HL["/xingmengyouling-blog/梓.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"huihe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"TOcIctwSta5Dt3SQXaVhR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"huihe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"jZcX_Ib3Fo3SeOJw9eJK0"}
