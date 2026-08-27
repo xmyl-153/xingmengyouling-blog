@@ -12,6 +12,19 @@ export default function CyberCat() {
 
   const chatTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // 🌟 成本控制：AI 调用冷却时间（5 分钟）。
+  // 冷却期间所有互动都使用本地预设文案，不调用任何 API，零成本。
+  const AI_COOLDOWN_MS = 5 * 60 * 1000;
+  const lastAiCallRef = useRef<number>(0);
+
+  // 🌟 冷却期内使用的预设回复（本地，不花钱）
+  const PRESET_REPLIES = [
+    "本喵刚说完话，有点累喵~ 过几分钟再来找本喵玩喵~",
+    "喵呜？主人说本喵今天说话次数够多啦，歇一歇喵~",
+    "（打了个哈欠）本喵要省着点力气抓老鼠喵... 等会再聊喵~",
+    "哼，想套本喵的话？没门喵！五分钟后再来喵~",
+  ];
+
   // --- 💬 说话功能 ---
   const speak = (text: string, duration = 6000) => {
     setSpeech(text);
@@ -31,34 +44,22 @@ export default function CyberCat() {
     }, 2000);
   };
 
-  // --- 🐟 交互事件：喂小鱼干 ---
-  const handleFeed = async (e: React.MouseEvent) => {
+  // --- 🐟 交互事件：喂小鱼干（固定预设动作，零成本，不调用 AI）---
+  const handleFeed = (e: React.MouseEvent) => {
     e.stopPropagation(); // 阻止触发摸猫或拖拽
     if (isThinking) return;
 
     setShowInput(false); // 喂食时关掉输入框
-    setIsThinking(true);
-    speak("嗷呜！真好吃喵！本喵吃饱了要说两句...", 6000);
-
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: "我刚刚喂了你一条美味的小鱼干！你有什么表示？" }),
-      });
-
-      if (!res.ok) throw new Error('API Error');
-
-      const data = await res.json();
-      speak(data.reply, 8000);
-    } catch (error) {
-      speak("吧唧吧唧... 鱼干好吃，但本喵卡壳了喵...", 4000);
-    } finally {
-      setIsThinking(false);
-    }
+    const feedLines = [
+      "嗷呜！真好吃喵！本喵吃饱了要睡一觉喵~",
+      "（咔嚓咔嚓）这条鱼干好脆喵！再来一条喵！",
+      "吧唧吧唧... 算你有良心，记得本喵爱吃小鱼干喵~",
+      "唔喵！本喵的快乐就是这么简单喵~",
+    ];
+    speak(feedLines[Math.floor(Math.random() * feedLines.length)], 6000);
   };
 
-  // --- 💬 交互事件：发送聊天 ---
+  // --- 💬 交互事件：发送聊天（带 5 分钟冷却，冷却期用预设回复，零成本）---
   const handleChatSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim() || isThinking) return;
@@ -66,6 +67,14 @@ export default function CyberCat() {
     const userMessage = inputValue;
     setInputValue('');
     setShowInput(false);
+
+    // 🌟 冷却判断：距离上次 AI 调用不足 5 分钟 → 用本地预设回复，不调 API
+    const now = Date.now();
+    if (now - lastAiCallRef.current < AI_COOLDOWN_MS) {
+      speak(PRESET_REPLIES[Math.floor(Math.random() * PRESET_REPLIES.length)], 6000);
+      return;
+    }
+
     setIsThinking(true);
     speak("让本喵想想喵...", 10000);
 
@@ -79,6 +88,7 @@ export default function CyberCat() {
       if (!res.ok) throw new Error('API Error');
 
       const data = await res.json();
+      lastAiCallRef.current = Date.now(); // 🌟 记录本次 AI 调用时间
       speak(data.reply, 8000);
     } catch (error) {
       speak("铲屎官的网线被老鼠咬断了吧？喵！", 4000);
