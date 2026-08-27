@@ -8,5 +8,5 @@
 :HL["/xingmengyouling-blog/_next/static/chunks/15cahw4d8-wp1.css","style"]
 :HL["/xingmengyouling-blog/_next/static/chunks/0-y7.kz1~5qzw.css","style"]
 :HL["/xingmengyouling-blog/玛丽婚纱.jpg","image"]
-:HL["https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"huihe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"6qMJh7e-S-xU_cyZ0zBXn"}
+:HL["/xingmengyouling-blog/梓.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"huihe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JOPf5BfhcsN35XceBuozm"}
