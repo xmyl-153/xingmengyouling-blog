@@ -1,7 +1,7 @@
 :HL["/xingmengyouling-blog/_next/static/chunks/145o.lsi86g0w.css","style"]
 :HL["/xingmengyouling-blog/_next/static/chunks/066jf0nk75nic.css","style"]
 :HL["/xingmengyouling-blog/_next/static/chunks/0~ydk.tni6snc.css","style"]
-:HL["/xingmengyouling-blog/_next/static/chunks/04_-ac4wtxp0x.css","style"]
+:HL["/xingmengyouling-blog/_next/static/chunks/00nef6ioecndu.css","style"]
 :HL["/xingmengyouling-blog/_next/static/media/797e433ab948586e-s.p.08e28id.o-okb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/xingmengyouling-blog/_next/static/media/caa3a2e1cccd8315-s.p.09~u27dqhyhd6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/xingmengyouling-blog/_next/static/media/f112ed7f0b91582f-s.p.0xqqmnf1a3x8p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -9,4 +9,4 @@
 :HL["/xingmengyouling-blog/_next/static/chunks/0-y7.kz1~5qzw.css","style"]
 :HL["/xingmengyouling-blog/mary-wedding.jpg","image"]
 :HL["/xingmengyouling-blog/zi.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"huihe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"N4VB30tUpr4l9eN3vKsuI"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"huihe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"rQeiYYVvwmdXk0ePD7UEV"}
