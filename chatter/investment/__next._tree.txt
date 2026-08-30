@@ -9,4 +9,4 @@
 :HL["/xingmengyouling-blog/_next/static/chunks/0-y7.kz1~5qzw.css","style"]
 :HL["/xingmengyouling-blog/tianzi.jpg","image"]
 :HL["/xingmengyouling-blog/zi.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"chatter","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"investment","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"ilUEd2nx57Ri8v_cXGQN2"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"chatter","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"investment","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"lRfhAZ_XSzXQ-gbyCwKzW"}
